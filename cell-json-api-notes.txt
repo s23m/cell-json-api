@@ -1,0 +1,6 @@
+Endpoint for JWT tokens
+-----------------------
+
+https://gitter.im/lhorie/mithril.js?at=55a39b2fadc533306a5d73f8
+
+@cyberco I've got an API where i can post a username and password to /tokens which returns a jwt including role and role description if authenticated.
