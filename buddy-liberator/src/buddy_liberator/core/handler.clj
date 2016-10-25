@@ -9,7 +9,8 @@
             [buddy.sign.generic :as jws]
             [buddy.hashers.bcrypt :as hs]
             [cheshire.core :refer :all]
-            [liberator.core :refer [resource defresource]])
+            [liberator.core :refer [resource defresource]]
+            [ring.logger :as logger])
   (:import [java.security SecureRandom]))
 
 (def users {"friend" {:username "friend"
@@ -84,6 +85,12 @@
          wrap-params
          (wrap-authentication signed-backend)))
 
-(defroutes app
+(defroutes app-routes
   (ANY "*" [] anon-routes)
   (ANY "*" [] loggedin-routes))
+
+; Main Ring handler
+(def app
+  (-> app-routes
+     wrap-params
+     logger/wrap-with-logger))

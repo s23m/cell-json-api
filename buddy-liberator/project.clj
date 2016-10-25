@@ -6,10 +6,17 @@
                  [compojure "1.3.1"]
                  [ring/ring-defaults "0.1.2"]
                  [liberator "0.12.2"]
-                 [buddy "0.3.0-SNAPSHOT"]
-                 [cheshire "5.4.0"]]
-  :plugins [[lein-ring "0.8.13"]]
-  :ring {:handler buddy-liberator.core.handler/app}
+                 [buddy "0.3.0-SNAPSHOT"] ; TODO: update
+                 [cheshire "5.4.0"]
+                 [ring-logger "0.7.6"]]
+  :plugins [
+    ; See https://github.com/weavejester/lein-ring
+    [lein-ring "0.8.13"]
+  ]
+  :ring {
+    :handler buddy-liberator.core.handler/app
+    :port 3000
+  }
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})
