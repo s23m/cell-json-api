@@ -1,7 +1,7 @@
-(ns buddy-liberator.core.handler-test
+(ns cell-json-api.core.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [buddy-liberator.core.handler :refer :all]))
+            [cell-json-api.core.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"

@@ -1,4 +1,4 @@
-(ns buddy-liberator.core.handler
+(ns cell-json-api.core.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.params :refer [wrap-params]]

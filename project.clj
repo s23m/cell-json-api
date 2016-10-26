@@ -1,6 +1,6 @@
-(defproject buddy-liberator "0.1.0-SNAPSHOT"
+(defproject cell-json-api "0.1.0-SNAPSHOT"
   :description "Buddy/Liberator integration"
-  :url "http://example.com/FIXME"
+  :url "http://github.com/s23m/"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [compojure "1.3.1"]
@@ -14,7 +14,7 @@
     [lein-ring "0.8.13"]
   ]
   :ring {
-    :handler buddy-liberator.core.handler/app
+    :handler cell-json-api.core.handler/app
     :port 3000
   }
   :profiles

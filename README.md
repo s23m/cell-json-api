@@ -1,6 +1,4 @@
-# buddy-liberator
-
-Sample repository to show one way to integrate [Buddy](https://github.com/funcool/buddy) and [Liberator](clojure-liberator.github.io/liberator/)
+Integrates [Buddy](https://github.com/funcool/buddy) and [Liberator](clojure-liberator.github.io/liberator/)
 
 ## Prerequisites
 
